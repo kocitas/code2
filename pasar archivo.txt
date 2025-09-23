@@ -1,0 +1,7 @@
+git add .
+git commit -m "mandar cambios"
+git push origin main
+
+
+git config --global user.name "Javi Ibáñez"
+git config --global user.email "javiibaco@gmail.com"
