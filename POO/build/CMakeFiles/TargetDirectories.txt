@@ -1,0 +1,3 @@
+/mnt/c/Users/javip/VScode1/POO/build/CMakeFiles/user-main.dir
+/mnt/c/Users/javip/VScode1/POO/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/javip/VScode1/POO/build/CMakeFiles/rebuild_cache.dir
