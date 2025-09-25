@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     pid1 = fork();
  if (pid1 == 0) {
         // Proceso hijo
-        execl("./factorial", "./ejercicio5_1", argv[1], (char *)NULL);
+        execl("./factorial", "./factorial", argv[1], (char *)NULL);
         perror("Error al ejecutar factorial");
         
     }
@@ -25,10 +25,12 @@ int main(int argc, char *argv[]) {
     pid2 = fork();
     if (pid2 == 0) {
         // Proceso hijo
-        execl("./factorial", "./ejercicio5_2", argv[2], (char *)NULL);
+        execl("./factorial", "./factorial", argv[2], (char *)NULL);
         perror("Error al ejecutar fibonacci");
         
     }
+
+    /* se usa null porque nos da igual el estado de los hijos*/
    wait(NULL);
    wait(NULL);
     // Padre espera a ambos hijos
