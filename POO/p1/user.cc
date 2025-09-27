@@ -1,13 +1,28 @@
 #include "user.h"
 
 // Constructor por defecto
-User::User() : id_(""), surname_(""), name_(""), nationality_(""), d_(0), m_(0), y_(0), complete_(false) {}
+User::User() {
+    id_ = "";
+    surname_ = "";
+    name_ = "";
+    nationality_ = "";
+    d_ = 0;
+    m_ = 0;
+    y_ = 0;
+    complete_ = false;
+}
 
 // Constructor con parámetros
 User::User(const std::string &id, const std::string &surname, const std::string &name,
-           const std::string &nationality, int d, int m, int y)
-    : id_(id), surname_(surname), name_(name), nationality_(nationality), d_(d), m_(m), y_(y) {
-    complete_ = !id.empty() && !surname.empty() && !name.empty() && !nationality.empty() && d>0 && m>0 && y>0;
+           const std::string &nationality, int d, int m, int y) {
+    id_ = id;
+    surname_ = surname;
+    name_ = name;
+    nationality_ = nationality;
+    d_ = d;
+    m_ = m;
+    y_ = y;
+    complete_ = !id.empty() && !surname.empty() && !name.empty() && !nationality.empty() && d > 0 && m > 0 && y > 0;
 }
 
 // Getters

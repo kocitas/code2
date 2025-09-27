@@ -13,7 +13,8 @@ private:
     bool complete_;
 
 public:
-    User();
+    // Default constructor: Initializes a User object with default values.
+        User();
     User(const std::string &id, const std::string &surname, const std::string &name,
          const std::string &nationality, int d, int m, int y);
 

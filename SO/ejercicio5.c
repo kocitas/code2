@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     pid1 = fork();
  if (pid1 == 0) {
         // Proceso hijo
-        execl("./factorial", "./factorial", argv[1], (char *)NULL);
+        execlp("./factorial", "./factorial", argv[1], (char *)NULL);
         perror("Error al ejecutar factorial");
         
     }
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     pid2 = fork();
     if (pid2 == 0) {
         // Proceso hijo
-        execl("./factorial", "./factorial", argv[2], (char *)NULL);
+        execlp("./factorial", "./factorial", argv[2], (char *)NULL);
         perror("Error al ejecutar fibonacci");
         
     }
