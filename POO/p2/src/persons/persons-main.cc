@@ -1,5 +1,7 @@
 #include "persons.h"
 #include <iostream>
+#include <limits>
+
 // Función para leer datos del usuario
 Person ReadPersonFromConsole() {
    
@@ -11,6 +13,8 @@ Person ReadPersonFromConsole() {
 
     std::cout << "Introduce el año de nacimiento: ";
     std::cin >> y;
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 
     return Person(name,y);
@@ -24,7 +28,7 @@ Cyclist ReadCyclistFromConsole() {
     int y;
 
     std::cout << "Introduce el nombre: ";
-    std::getline(std::cin, id);
+    std::getline(std::cin, name);
 
     std::cout << "Introduce el team: ";
     std::getline(std::cin, team);
@@ -35,6 +39,7 @@ Cyclist ReadCyclistFromConsole() {
     std::cout << "Introduce el año de nacimiento: ";
     std::cin >> y;
 
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     return Cyclist(name,y,team,id);
    
@@ -61,6 +66,7 @@ Director ReadDirectorFromConsole() {
     std::cout << "Introduce desde cuando eres director: ";
     std::cin >> since;
 
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     return Director(name,y,team, license, since);
    

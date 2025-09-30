@@ -1,0 +1,8 @@
+/mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/CMakeFiles/edit_cache.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/persons/CMakeFiles/persons.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/persons/CMakeFiles/persons-main.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/persons/CMakeFiles/edit_cache.dir
+/mnt/c/Users/javip/VScode1/POO/p2/build/src/persons/CMakeFiles/rebuild_cache.dir

@@ -1,40 +1,32 @@
 #include "persons.h"
 
-//cualquier clase que quiera llamar fuera de su definicion tengo que poner Clase::
-
-
 /*costructor sin parametros*/
 Person::Person() {
-    /*inicializas parametros de constructor*/
     name_ = "UNKNOWN";
     birth_year_ = -1;
 }
 
 Person::Person(const std::string& name, int year) {
-    /*inicializas parametros de constructor*/
-
     name_ = name;
     birth_year_ = year;
 }
+
 /*getter*/
-std::string Person::getName() const { return name_; }//retornas los parametros
+std::string Person::getName() const { return name_; }
 int Person::getBirthYear() const { return birth_year_; }
 
 /*setter*/
 
-    void Person::setName(const std::string& name){name_=name;}//inicializas setters
-    void Person::setBirthYear(int year){birth_year_=year;}
+    void setName(const std::string& name);
+    void setBirthYear(int year);
 
 
 /*<----clase ciclista---->*/
 
-//constructor
-Cyclist::Cyclist() { 
+
+Cyclist::Cyclist() {//constructor 
     team_ = "UNKNOWN";
     cyclist_id_ = "UNKNOWN";
-    /*es correcto hacerlo asi, pero es mas eficiente:
-    Cyclist::Cyclist() : Person(), team_("UNKNOWN"), cyclist_id_("UNKNOWN") {}
-    */
 }
 
 //constructor completo 
@@ -44,11 +36,9 @@ Cyclist::Cyclist(const std::string& name, int year, const std::string& team, con
     cyclist_id_ = id;
 }
 
-//setters
-void Cyclist::setTeam(const std::string& team) { team_ = team; }
-void Cyclist::setCyclist_id(const std::string& cyclist_id) { cyclist_id_ = cyclist_id; }
 
-//getters
+void Cyclist::setTeam(std::string team) { team_ = team; }
+void Cyclist::setCyclist_id(std::string cyclist_id) { cyclist_id_ = cyclist_id; }
 std::string Cyclist::getTeam() const { return team_; }
 std::string Cyclist::getCyclist_id() const { return cyclist_id_; }
 
@@ -66,7 +56,7 @@ Director::Director() {
 //constructor completo
 Director::Director(const std::string& name, int year, const std::string& team,
                    const std::string& license_id, int since)
-    : Person(name, year) {//atributos heredados
+    : Person(name, year) {
     team_ = team;
     uci_license_id_ = license_id;
     director_since_ = since;

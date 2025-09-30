@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/persons-main.dir/persons-main.cc.o" -o persons-main  libpersons.a 
