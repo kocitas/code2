@@ -2,74 +2,81 @@
 #define PERSONS_H
 
 #include <string>
+/*
+notas: 
 
+1. no es necesario pasar por referencia con & ni poner const
+pero es mejor acostumbrarse por si alguna vez se trabaja con cadenas largas
+
+
+*/
 class Person {
-private:
-        /*se declaran las variables*/
-    std::string name_;
-    int birth_year_;
 
-public:
-    /*se declaran los constructores*/
-    Person();                                   // Por defecto: "UNKNOWN", -1
-    Person(const std::string& name, int year);  // Constructor con parámetros
-    /*en los constructores se declara los string por referencia*/
+    private: //atributos
+        std::string name_;
+        int birth_year_;
 
-    
-    // Observadores (getters)
+    public: //metodos
+        Person();
+        Person(const std::string &name, int birth_year);
+
+    //getters (observadores)
+
     std::string getName() const;
-    int getBirthYear() const;
+    int getBirthYear() const; 
 
-    // Modificadores (setters)
-    void setName(const std::string& name);
-    void setBirthYear(int year);
+    //setters (modificadores)
+
+    void setName(const std::string &name);
+    void setBirthYear(int year); 
 
 };
 
+//clase ciclista (herencia)
 
-/*clase heredada cyclist*/
+class Cyclist : public Person{
 
-class Cyclist : public Person{//declaracion con herencia 
-        
-    private:
-        /*se declaran las variables */
+    private://atributos
         std::string team_;
         std::string cyclist_id_;
 
-    public: 
-
+    public://metodos
         Cyclist();
-        Cyclist(const std::string& name, int year, const std::string& team, const std::string& id);
-    
-           // setters
-        void setTeam(const std::string &team);
-        void setCyclist_id(const std::string &Cyclist_id);
+        Cyclist(const std::string& name, int year,
+          const std::string& team, const std::string& cyclist_id);
 
-          //getters
-        std::string getTeam() const;   
-        std::string getCyclist_id() const;    
-     
-};
-    class Director : public Person{//declaracion con herencia
-     private:
-    std::string team_;
-    std::string uci_license_id_;
-    int director_since_;
+     //getters (observadores)
+     std::string getTeam() const;
+     std::string getCyclistId() const; 
 
-        public:
-    Director();  
-    Director(const std::string& name, int year, const std::string& team,
-             const std::string& license_id, int since);
-
-    // Setters
-    void setTeam(const std::string& team);
-    void setUciLicenseId(const std::string& license_id);
-    void setDirectorSince(int since);
-
-    // Getters
-    std::string getTeam() const;
-    std::string getUciLicenseId() const;
-    int getDirectorSince() const;
+       //setters (modificadores)
+     void setTeam(const std::string& team);
+     void setCyclistId(const std::string& cyclist_id);
 };
 
+class Director : public Person {
+
+
+    private://atributos
+        std::string team_;
+        std::string uci_license_id_;
+        int director_since_;
+
+    public://metodos
+        Director();
+        Director(const std::string& name, int birth_year,
+         const std::string& team, const std::string& uci_license_id,
+         int director_since);
+
+    //getters (observadores)
+        std::string getTeam() const;
+        std::string getUciLicenseId() const;
+        int getDirectorSince() const; 
+
+    //setters (modificadores)
+    void setTeam(const std::string &team);
+    void setUciLicenseId(const std::string &uci_license_id);
+    void setDirectorSince(int director_since);
+
+};
 #endif // PERSONS_H

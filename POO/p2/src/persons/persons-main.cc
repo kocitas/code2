@@ -1,10 +1,9 @@
 #include "persons.h"
 #include <iostream>
-#include <limits>
+#include <limits>//para usar cin.ignore
 
 // Función para leer datos del usuario
 Person ReadPersonFromConsole() {
-   
     std::string name;
     int y;
 
@@ -14,16 +13,14 @@ Person ReadPersonFromConsole() {
     std::cout << "Introduce el año de nacimiento: ";
     std::cin >> y;
 
+    //limpiar el buffer para que no quede \n
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-
-    return Person(name,y);
-   
+    return Person(name, y);
 }
 
 // Función para leer datos del usuario
 Cyclist ReadCyclistFromConsole() {
-   
     std::string name, team, id;
     int y;
 
@@ -39,15 +36,13 @@ Cyclist ReadCyclistFromConsole() {
     std::cout << "Introduce el año de nacimiento: ";
     std::cin >> y;
 
-std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    return Cyclist(name,y,team,id);
-   
+    return Cyclist(name, y, team, id);
 }
 
 // Función para leer datos del usuario
 Director ReadDirectorFromConsole() {
-   
     std::string name, team, license;
     int y, since;
 
@@ -63,34 +58,34 @@ Director ReadDirectorFromConsole() {
     std::cout << "Introduce el año de nacimiento: ";
     std::cin >> y;
 
-    std::cout << "Introduce desde cuando eres director: ";
+    std::cout << "Introduce desde cuándo eres director: ";
     std::cin >> since;
 
-std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    return Director(name,y,team, license, since);
-   
+    return Director(name, y, team, license, since);
 }
 
 // Función para imprimir datos del usuario
-void PrintPersonToConsole(const Person &p) {
+void PrintPersonToConsole(const Person& p) {
     std::cout << "\n--- Datos de la persona ---\n";
-    std::cout << "su nomnre es:: " << p.getName() << "\n";
-    std::cout << "año de nacimiento: " << p.getBirthYear() << "\n";
+    std::cout << "Nombre: " << p.getName() << "\n";
+    std::cout << "Año de nacimiento: " << p.getBirthYear() << "\n";
     std::cout << "--------------------------\n";
 }
 
 // Función para imprimir datos del usuario
-void PrintCyclistToConsole(const Cyclist &c) {
+void PrintCyclistToConsole(const Cyclist& c) {
     std::cout << "\n--- Datos del ciclista ---\n";
-    std::cout << "su nomnre es:: " << c.getName() << "\n";
-    std::cout << "año de nacimiento: " << c.getBirthYear() << "\n";
-    std::cout << "team: " << c.getTeam() << "\n";
-    std::cout << "id: " << c.getCyclist_id() << "\n";
+    std::cout << "Nombre: " << c.getName() << "\n";
+    std::cout << "Año de nacimiento: " << c.getBirthYear() << "\n";
+    std::cout << "Team: " << c.getTeam() << "\n";
+    std::cout << "ID: " << c.getCyclistId() << "\n"; // ✅ camelCase
     std::cout << "--------------------------\n";
 }
 
-void PrintDirectorToConsole(const Director &d) {
+// Función para imprimir datos del usuario
+void PrintDirectorToConsole(const Director& d) {
     std::cout << "\n--- Datos del director ---\n";
     std::cout << "Nombre: " << d.getName() << "\n";
     std::cout << "Año de nacimiento: " << d.getBirthYear() << "\n";
@@ -100,22 +95,17 @@ void PrintDirectorToConsole(const Director &d) {
     std::cout << "--------------------------\n";
 }
 
+int main() {
+    std::cout << "CREANDO OBJETOS...." << std::endl;
 
-int main(){
-
-std::cout<<"CREANDO OBJETOS...."<<std::endl;
-
-Person p=ReadPersonFromConsole();
-Cyclist c=ReadCyclistFromConsole();
-Director d=ReadDirectorFromConsole(); 
-
+    Person p = ReadPersonFromConsole();
+    Cyclist c = ReadCyclistFromConsole();
+    Director d = ReadDirectorFromConsole();
 
     // Mostrar los datos
-   
-PrintPersonToConsole(p);
-PrintCyclistToConsole(c);
-PrintDirectorToConsole(d);
+    PrintPersonToConsole(p);
+    PrintCyclistToConsole(c);
+    PrintDirectorToConsole(d);
 
-    
     return 0;
 }

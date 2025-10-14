@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/javip/VScode1/POO/p2/src/persons
+# Install script for directory: /mnt/c/VScode1/POO/p2/src/persons
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

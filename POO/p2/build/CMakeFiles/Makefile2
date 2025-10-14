@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/javip/VScode1/POO/p2
+CMAKE_SOURCE_DIR = /mnt/c/VScode1/POO/p2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/javip/VScode1/POO/p2/build
+CMAKE_BINARY_DIR = /mnt/c/VScode1/POO/p2/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -79,15 +79,35 @@ clean: src/clean
 
 # Recursive "all" directory target.
 src/all: src/persons/all
+src/all: src/catalog/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/persons/preinstall
+src/preinstall: src/catalog/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/persons/clean
+src/clean: src/catalog/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/catalog
+
+# Recursive "all" directory target.
+src/catalog/all: src/catalog/CMakeFiles/catalog.dir/all
+src/catalog/all: src/catalog/CMakeFiles/catalog-main.dir/all
+.PHONY : src/catalog/all
+
+# Recursive "preinstall" directory target.
+src/catalog/preinstall:
+.PHONY : src/catalog/preinstall
+
+# Recursive "clean" directory target.
+src/catalog/clean: src/catalog/CMakeFiles/catalog.dir/clean
+src/catalog/clean: src/catalog/CMakeFiles/catalog-main.dir/clean
+.PHONY : src/catalog/clean
 
 #=============================================================================
 # Directory level rules for directory src/persons
@@ -113,14 +133,14 @@ src/persons/clean: src/persons/CMakeFiles/persons-main.dir/clean
 src/persons/CMakeFiles/persons.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles --progress-num=1,2 "Built target persons"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/VScode1/POO/p2/build/CMakeFiles --progress-num=5,6 "Built target persons"
 .PHONY : src/persons/CMakeFiles/persons.dir/all
 
 # Build rule for subdir invocation for target.
 src/persons/CMakeFiles/persons.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 0
 .PHONY : src/persons/CMakeFiles/persons.dir/rule
 
 # Convenience name for target.
@@ -139,14 +159,14 @@ src/persons/CMakeFiles/persons.dir/clean:
 src/persons/CMakeFiles/persons-main.dir/all: src/persons/CMakeFiles/persons.dir/all
 	$(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles --progress-num=3,4 "Built target persons-main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/VScode1/POO/p2/build/CMakeFiles --progress-num=7,8 "Built target persons-main"
 .PHONY : src/persons/CMakeFiles/persons-main.dir/all
 
 # Build rule for subdir invocation for target.
 src/persons/CMakeFiles/persons-main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons-main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 0
 .PHONY : src/persons/CMakeFiles/persons-main.dir/rule
 
 # Convenience name for target.
@@ -157,6 +177,59 @@ persons-main: src/persons/CMakeFiles/persons-main.dir/rule
 src/persons/CMakeFiles/persons-main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/clean
 .PHONY : src/persons/CMakeFiles/persons-main.dir/clean
+
+#=============================================================================
+# Target rules for target src/catalog/CMakeFiles/catalog.dir
+
+# All Build rule for target.
+src/catalog/CMakeFiles/catalog.dir/all: src/persons/CMakeFiles/persons.dir/all
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog.dir/build.make src/catalog/CMakeFiles/catalog.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog.dir/build.make src/catalog/CMakeFiles/catalog.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/VScode1/POO/p2/build/CMakeFiles --progress-num=1,2 "Built target catalog"
+.PHONY : src/catalog/CMakeFiles/catalog.dir/all
+
+# Build rule for subdir invocation for target.
+src/catalog/CMakeFiles/catalog.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/catalog/CMakeFiles/catalog.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 0
+.PHONY : src/catalog/CMakeFiles/catalog.dir/rule
+
+# Convenience name for target.
+catalog: src/catalog/CMakeFiles/catalog.dir/rule
+.PHONY : catalog
+
+# clean rule for target.
+src/catalog/CMakeFiles/catalog.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog.dir/build.make src/catalog/CMakeFiles/catalog.dir/clean
+.PHONY : src/catalog/CMakeFiles/catalog.dir/clean
+
+#=============================================================================
+# Target rules for target src/catalog/CMakeFiles/catalog-main.dir
+
+# All Build rule for target.
+src/catalog/CMakeFiles/catalog-main.dir/all: src/persons/CMakeFiles/persons.dir/all
+src/catalog/CMakeFiles/catalog-main.dir/all: src/catalog/CMakeFiles/catalog.dir/all
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog-main.dir/build.make src/catalog/CMakeFiles/catalog-main.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog-main.dir/build.make src/catalog/CMakeFiles/catalog-main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/VScode1/POO/p2/build/CMakeFiles --progress-num=3,4 "Built target catalog-main"
+.PHONY : src/catalog/CMakeFiles/catalog-main.dir/all
+
+# Build rule for subdir invocation for target.
+src/catalog/CMakeFiles/catalog-main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/catalog/CMakeFiles/catalog-main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 0
+.PHONY : src/catalog/CMakeFiles/catalog-main.dir/rule
+
+# Convenience name for target.
+catalog-main: src/catalog/CMakeFiles/catalog-main.dir/rule
+.PHONY : catalog-main
+
+# clean rule for target.
+src/catalog/CMakeFiles/catalog-main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/catalog/CMakeFiles/catalog-main.dir/build.make src/catalog/CMakeFiles/catalog-main.dir/clean
+.PHONY : src/catalog/CMakeFiles/catalog-main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

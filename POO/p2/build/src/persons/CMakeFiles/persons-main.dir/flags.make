@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/javip/VScode1/POO/p2/src/persons
+CXX_INCLUDES = -I/mnt/c/VScode1/POO/p2/src/persons
 
 CXX_FLAGS = -std=gnu++20
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/javip/VScode1/POO/p2
+CMAKE_SOURCE_DIR = /mnt/c/VScode1/POO/p2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/javip/VScode1/POO/p2/build
+CMAKE_BINARY_DIR = /mnt/c/VScode1/POO/p2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles /mnt/c/Users/javip/VScode1/POO/p2/build/src/persons//CMakeFiles/progress.marks
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/javip/VScode1/POO/p2/build/CMakeFiles 0
+	cd /mnt/c/VScode1/POO/p2/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles /mnt/c/VScode1/POO/p2/build/src/persons//CMakeFiles/progress.marks
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/VScode1/POO/p2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/clean
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/preinstall
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/preinstall
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/VScode1/POO/p2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/persons/CMakeFiles/persons.dir/rule:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons.dir/rule
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons.dir/rule
 .PHONY : src/persons/CMakeFiles/persons.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ persons: src/persons/CMakeFiles/persons.dir/rule
 
 # fast build rule for target.
 persons/fast:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/build
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/build
 .PHONY : persons/fast
 
 # Convenience name for target.
 src/persons/CMakeFiles/persons-main.dir/rule:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons-main.dir/rule
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/persons/CMakeFiles/persons-main.dir/rule
 .PHONY : src/persons/CMakeFiles/persons-main.dir/rule
 
 # Convenience name for target.
@@ -141,7 +141,7 @@ persons-main: src/persons/CMakeFiles/persons-main.dir/rule
 
 # fast build rule for target.
 persons-main/fast:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/build
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/build
 .PHONY : persons-main/fast
 
 persons-main.o: persons-main.cc.o
@@ -149,7 +149,7 @@ persons-main.o: persons-main.cc.o
 
 # target to build an object file
 persons-main.cc.o:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.o
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.o
 .PHONY : persons-main.cc.o
 
 persons-main.i: persons-main.cc.i
@@ -157,7 +157,7 @@ persons-main.i: persons-main.cc.i
 
 # target to preprocess a source file
 persons-main.cc.i:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.i
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.i
 .PHONY : persons-main.cc.i
 
 persons-main.s: persons-main.cc.s
@@ -165,7 +165,7 @@ persons-main.s: persons-main.cc.s
 
 # target to generate assembly for a file
 persons-main.cc.s:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.s
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons-main.dir/build.make src/persons/CMakeFiles/persons-main.dir/persons-main.cc.s
 .PHONY : persons-main.cc.s
 
 persons.o: persons.cc.o
@@ -173,7 +173,7 @@ persons.o: persons.cc.o
 
 # target to build an object file
 persons.cc.o:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.o
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.o
 .PHONY : persons.cc.o
 
 persons.i: persons.cc.i
@@ -181,7 +181,7 @@ persons.i: persons.cc.i
 
 # target to preprocess a source file
 persons.cc.i:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.i
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.i
 .PHONY : persons.cc.i
 
 persons.s: persons.cc.s
@@ -189,7 +189,7 @@ persons.s: persons.cc.s
 
 # target to generate assembly for a file
 persons.cc.s:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.s
+	cd /mnt/c/VScode1/POO/p2/build && $(MAKE) $(MAKESILENT) -f src/persons/CMakeFiles/persons.dir/build.make src/persons/CMakeFiles/persons.dir/persons.cc.s
 .PHONY : persons.cc.s
 
 # Help Target
@@ -219,6 +219,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/Users/javip/VScode1/POO/p2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/VScode1/POO/p2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

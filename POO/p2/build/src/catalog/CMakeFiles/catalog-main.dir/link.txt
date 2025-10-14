@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/catalog-main.dir/catalog-main.cc.o" -o catalog-main  libcatalog.a ../persons/libpersons.a 

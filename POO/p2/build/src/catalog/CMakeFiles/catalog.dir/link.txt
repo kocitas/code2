@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcatalog.a CMakeFiles/catalog.dir/catalog.cc.o
+/usr/bin/ranlib libcatalog.a

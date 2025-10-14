@@ -1,8 +1,7 @@
 src/persons/CMakeFiles/persons.dir/persons.cc.o: \
- /mnt/c/Users/javip/VScode1/POO/p2/src/persons/persons.cc \
- /usr/include/stdc-predef.h \
- /mnt/c/Users/javip/VScode1/POO/p2/src/persons/persons.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
+ /mnt/c/VScode1/POO/p2/src/persons/persons.cc /usr/include/stdc-predef.h \
+ /mnt/c/VScode1/POO/p2/src/persons/persons.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
