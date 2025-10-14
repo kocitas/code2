@@ -13,4 +13,35 @@ timbrazos, el proceso se debe parar utilizando para ello la función kill().
 #include <sys/types.h>
 #include <sys/wait.h>
 
+int main(){
+
+    pid_t pid=getpid(); //obtener el pid del proceso actual
+    int timbrazos=0; 
+
+    //primer ring 
+
+    sleep(5);
+    printf("RING\n");
+
+    //segundo ring 
+    sleep(3);
+    printf("RING\n");
+
+    //cada segundo 
+    while(1){
+        sleep(1);
+        timbrazos++;
+        printf("RING %d\n", timbrazos);
+
+        //despues de 4 timbrazos, terminar proceso
+
+        if(timbrazos==4){
+            printf("Finalizar proceso...\n");
+            kill(pid, SIGTERM);
+        }
+    }
+
+
+    return 0;
+}
 

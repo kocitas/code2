@@ -26,7 +26,7 @@ User ReadUserFromConsole() {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     return User(id, surname, name, nationality, d, m, y);
-}
+}º
 
 // Función para imprimir datos del usuario
 void PrintUserToConsole(const User &u) {

@@ -10,6 +10,8 @@ private:
     std::string name_;
     std::string nationality_;
     int d_, m_, y_;
+
+
     bool complete_;
 
 public:
